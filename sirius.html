@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title-container">
+        <h1>Primero dejame contarte una historia</h1>
+    </div>
+    <div class="img-container">
+        <button onclick="hide()">Oprime para ver</button>
+        <div class="hidden">
+            <div class="main"></div>
+            <img src="assets/img/sirius.gif" alt="sirius" height="100px" width="100px">
+            <p>Esta es la estrella más hermosa según los astrólogos. Su nombre es:</p>
+            <h2><span class="red">SIRIUS</span></h2>
+            <p>Es la estrella más brillante del cielo. Brilla con magnitud 1.5.<br>
+                Se trata de una estrella blanca , 25 veces más luminosa que el Sol, cuya <br>
+                temperatura en la superficie llega a los 10000 K.
+            </p>
+            <p>Pero hay que verla un poco más de cerca.</p>
+
+            <a href="sirius-close.html">
+                <input class="zoom" type="image" src="assets/img/telescopio.jpg" height="50" width="50">
+            </a>
+            <p>Oprime el telescopio para viajar 8.611 años luz</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.querySelector(".hidden").style.display = 'none';
+        function hide() {
+            var x = document.querySelector(".hidden");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        document.querySelector("button").addEventListener("click", function () {
+            this.disabled = true;
+        });
+    </script>
+</body>
+
+</html>

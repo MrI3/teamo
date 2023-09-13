@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        document.documentElement.classList.add('preparation');
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main"></div>
+    <div class="title-container">
+        <h1>Así se ve esta hermosa estrella de cerca</h1>
+    </div>
+    <div class="img-container">
+        <div class="hidden">
+            <img src="assets/img/sirius-close.jpg" alt="sirius">
+            <p>Sirius es visible desde casi todo el planeta</p>
+            <h2>SIRIUS</h2>
+            <p>Su brillo intenso es tan presente en la bóveda celeste porque está <br>
+                relativamente cerca de nuestro Sistema Solar. De acuerdo con los cálculos de la <br>
+                NASA, esta estrella tiene una masa que duplica la de nuestro Sol. De hecho, si la <br>
+                estrella se colocara junto enfrente de nuestro astro principal, lo eclipsaría por <br>
+                más de 20 veces.
+            </p>
+            <br><br><br><br>
+            <p>Por años ha sido considerada la estrella más hermosa, sin embargo yo conozco <br>
+                una estrella que es aún más hermosa que Sirius.
+            </p>
+            <p>
+                La vi en una noche de un jueves 29 de junio en el siguiente lugar:
+            </p>
+            <a href="nei.html">
+                
+                <input type="submit" value="20.117341, -98.741065">
+            </a>
+            <p>Oprime el botón para ver la estrella</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function() {
+    document.documentElement.classList.add('show-time');
+};
+        document.querySelector(".hidden").style.display = 'flex';
+        function hide() {
+            var x = document.querySelector(".hidden");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        document.querySelector("button").addEventListener("click", function () {
+            this.disabled = true;
+        });
+    </script>
+</body>
+
+</html>
